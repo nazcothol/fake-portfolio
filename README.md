@@ -31,8 +31,10 @@ _</ nachos >_
 # Here's what we need:
 
 1. Shovel
-2. Item two
-3. Item three
+2. Yoga ball
+3. A Spoon
+4. Walkman
+
 
 w/ sub-lists
 
