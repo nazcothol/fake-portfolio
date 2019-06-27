@@ -1,0 +1,23 @@
+body {
+    font-family: "Roboto";
+    background-color: darkgreen;
+    background: rgba(rgb(145, 37, 37), rgb(110, 119, 110), rgb(116, 116, 145), 0.78);
+    color: red;
+    font-size: 20px
+}
+h1 {
+font-size: 3em
+}
+
+p {
+    font-size: 0.75em
+}
+footer {
+
+}
+img{
+    width: 100vw;
+    max-width: 100vw;
+    margin: 1px;
+    padding: 1px;
+}
