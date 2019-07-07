@@ -1,9 +1,10 @@
 body {
-    font-family: "Roboto";
+    font-family: "Lato, sans-serif";
     background-color: darkgreen;
     background: rgba(rgb(145, 37, 37), rgb(110, 119, 110), rgb(116, 116, 145), 0.78);
-    color: red;
-    font-size: 20px
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
 }
 h1 {
 font-size: 3em
@@ -11,7 +12,7 @@ font-size: 3em
 header {
     align-items: center;
     background-position: center;
-    background-image: url(https://images.unsplash.com/photo-1561722798-9a732d141027?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2767&q=80);
+    background-image: url(https://i0.wp.com/pageandsound.com/wp-content/uploads/2014/06/StudioshotDS10-e1464399576850.jpg?ssl=1);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -35,20 +36,39 @@ main > section {
     text-transform: capitalize;
 
 }
+.cta-btn {
+    background-color: slategray;
+    margin: 10px 0;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 20%;
+    text-decoration: none;
+transition: .25s;
+}
+.cta-btn:focus,
+.cta-btn:hover {
+background-color: rgb(145, 158, 172);
+margin: 9px 0;
+transform: translateY(-3px);
+}
+
 p {
     font-size: 0.75em
 }
 ul {
     padding: 0;
+    text-decoration: none;
 }
 
 li {
     list-style-type: none;
+    text-decoration: none;
 }
 nav > ul {
     display: flex;
     justify-content: space-around;
     margin: 0;
+    text-decoration: none;
 }
 
 footer {
@@ -79,4 +99,24 @@ nav{
 
 footer li {
     display: inline-block;
+}
+/* form items */
+form {
+    margin: 15px auto;
+    width: 60vw;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+
+}
+form span {
+    margin: 0 5px;
+}
+
+/* attribute selector */
+input [type="checkbox"] {
+    margin-right: 10px;
+
+}
+input[type="checkbox"] {
+    margin-right: 10px;
 }
