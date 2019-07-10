@@ -1,10 +1,10 @@
 body {
-    font-family: "Lato, sans-serif";
-    background-color: darkgreen;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
     background: rgba(rgb(145, 37, 37), rgb(110, 119, 110), rgb(116, 116, 145), 0.78);
     color: rgb(255, 255, 255);
     font-size: 20px;
-    text-decoration: none;
 }
 h1 {
 font-size: 3em
@@ -21,20 +21,24 @@ header {
 }
 header div {
     align-items: center;
-    border-radius: 20px;
+    border-radius: 130px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 0 70px;
+    padding: 1px 30px;
 }
 
 main {
     display: flex;
 }
 main > section {
-    background: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
     padding: 20px;
     margin: 15px;
-    text-transform: capitalize;
 
+
+}
+.float {
+    position: relative;
+    bottom: 40px;
 }
 .cta-btn {
     background-color: slategray;
@@ -57,20 +61,21 @@ p {
 }
 ul {
     padding: 0;
-    text-decoration: none;
 }
 
 li {
     list-style-type: none;
-    text-decoration: none;
 }
 nav > ul {
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
     margin: 0;
+    padding: 5px 0;
+}
+nav a {
     text-decoration: none;
 }
-
 footer {
 
 }
@@ -81,7 +86,11 @@ img{
     padding: 1px;
 }
 nav{
-    background-color: powderblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #72afd3;
+    text-decoration: none;
 }
 .dropdown ul {
     background-color: powderblue;
@@ -99,6 +108,7 @@ nav{
 
 footer li {
     display: inline-block;
+
 }
 /* form items */
 form {

@@ -6,32 +6,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
 
 </head>
 <body>
+        <nav><ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="../About">About</a></li>
+                <li><a href="../Contact">Contact</a></li>
+                <li class="dropdown">
+                    Portfolio
+                    <ul>
+                      <li><a href="#">Project 1</a></li>
+                      <li><a href="#">Project 2</a></li>
+                      <li><a href="#">Project 3</a></li>
+                    </ul>
+                </li>
+            </ul></nav>
         <header>
                 <H1>Scott</H1>
     
         </header>
-    <nav><ul>
-        <li><a href="../">Home</a></li>
-        <li><a href="../About">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li>Portfolio
-            <ul>
-              <li><a href="#">Project 1</a></li>
-              <li><a href="#">Project 2</a></li>
-              <li><a href="#">Project 3</a></li>
-            </ul>
-        </li>
+
+      
+    
     </ul></nav>
     
     <main>
+    <!--
+      The action attribute defines where on the server the form data should be sent
+      The method attribute specifies the HTTP method (GET or POST)
+    -->
     
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+    <form action="form-responses/new" method="POST">
+    
+        <!-- Developer's Note: 'placeholder' without using `<label>` is NOT RECOMMENDED for accessibility purposes. -->
+          <input type="text" name="firstname" placeholder="First Name" autofocus />
+          <input type="text" name="lastname" placeholder="Last Name" />
+          <input type="email" name="userEmail" placeholder="your.email@example.com" />
+        
+          <p>What's this message about?</p>
+        
+        <div class="input-group">
+          <span>
+            <input type="radio" name="subject" value="professional" id="pro" checked />
+            <label for="pro">I'd like to hire you!</label>
+          </span>
+        
+          <span>
+            <input type="radio" name="subject" value="personal" id="personal" />
+            <label for="personal">Personal message</label>
+          </span>
+          <span>
+            <input type="radio" name="subject" value="other" />
+            <label>Don't know/something else</label>
+          </span>
+          </div>
+        
+          <div class="input-group">
+          <input type="checkbox" name="optin" value="trusting" checked />Subscribe me to
+          your newsletter!
+          <input type="checkbox" name="optout" value="skeptical" disabled />Cheeky
+          checkbox...
+          </div>
+        
+          <div class="input-group">
+
+          <label for="marketing">How did you hear about me?</label>
+          <select name="marketing">
+            <optgroup label="Online">
+              <option value="social">Social Media (FB, Twitter, LinkedIn)</option>
+              <option value="github">Online Portfolio (GitHub)</option>
+              <option value="search">Search Engine</option>
+              <option value="email">Email</option>
+            </optgroup>
+            <optgroup label="In-Person">
+              <option value="networking">We met at a networking event</option>
+              <option value="referral">Personal referral</option>
+              <option value="random">We met somewhere else</option>
+            </optgroup>
+            <option value="other">Other</option>
+          </select>
+          </div>
+        
+          <textarea name="user_message" rows="8" cols="40"></textarea>
+          <input type="submit" />
+        </form>
+        </main>
+
     
 </body>
 </html>

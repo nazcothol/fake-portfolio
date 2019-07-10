@@ -1,10 +1,10 @@
-# Scott 
+# Scott
 
 ## Creator of Worlds
 
 ### Small worlds
 
-###### Pretty f**cking small
+###### Pretty small
 
 **Former superpopular tech blogger from such online hits as AppAdvice**
 
@@ -19,7 +19,7 @@ _Come on Fhqwhgads_
 ~~Not a portfolio~~
 
 Sometimes you want some \*nachos\*
-right into **your life.** 
+right into **your life.**
 
 _</ nachos >_
 
