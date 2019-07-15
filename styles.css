@@ -42,11 +42,12 @@ main > section {
 }
 .cta-btn {
     background-color: slategray;
-    margin: 10px 0;
+    margin: 10px 5px;
     padding: 10px;
     display: inline-block;
-    border-radius: 20%;
+    border-radius: 05%;
     text-decoration: none;
+    position: absolute;
 transition: .25s;
 }
 .cta-btn:focus,
@@ -79,6 +80,7 @@ nav a {
 footer {
 
 }
+
 img{
     width: 100vw;
     max-width: 100vw;
@@ -129,4 +131,7 @@ input [type="checkbox"] {
 }
 input[type="checkbox"] {
     margin-right: 10px;
+}
+a {
+    color: #2b3050;
 }
