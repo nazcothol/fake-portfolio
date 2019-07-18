@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
 <main>
 
 <section class="float">
@@ -15,3 +16,4 @@ export default `
 
 
 </main>`;
+}

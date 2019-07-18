@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
 <nav><ul>
 <li><a href="#">Home</a></li>
 <li><a href="../About">About</a></li>
@@ -11,4 +12,6 @@ export default `
       <li><a href="#">Project 3</a></li>
     </ul>
 </li>
-</ul></nav>`;
+</ul></nav>
+`;
+}

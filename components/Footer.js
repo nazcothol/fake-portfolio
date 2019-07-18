@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
 <footer>
 <p>Copyright © 2019 Scott Newton. All Rights Reserved.</p>
 <ul>
@@ -22,3 +23,4 @@ export default `
 
 
 </footer>`;
+}
