@@ -46,16 +46,17 @@ function render(state){
     ${Main(state)}
     ${Footer(state)}
     `;
-}
-render(states.home);
-//  POS = Piece of State Oo
-// new below
-const navItems = document.querySelectorAll('nav>ul>li:not(.dropdown)');
 
-navItems.forEach(function eventListenerAdder(navItem){
-    navItem.addEventListener('click', function clickHandler(event){
-        event.preventDefault();
 
-        render(states[event.target.textContent.toLowerCase()]);
+    //  POS = Piece of State Oo
+    // new below
+    const navItems = document.querySelectorAll('nav>ul>li:not(.dropdown)');
+
+    navItems.forEach(function eventListenerAdder(navItem){
+        navItem.addEventListener('click', function clickHandler(event){
+            event.preventDefault();
+
+            render(states[event.target.textContent.toLowerCase()]);
+        });
     });
-});
+}
