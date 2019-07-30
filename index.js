@@ -37,8 +37,6 @@ const states = {
 
 
 function render(state){
-    console.log('state came in as:', state);
-
     // we use function invocation that actually runs the fnctn and then 'returns' the mkup so it's prop browser rendered
     document.querySelector('#root').innerHTML = `
     ${Navigation(state)}
@@ -47,9 +45,6 @@ function render(state){
     ${Footer(state)}
     `;
 
-
-    //  POS = Piece of State Oo
-    // new below
     const navItems = document.querySelectorAll('nav>ul>li:not(.dropdown)');
 
     navItems.forEach(function eventListenerAdder(navItem){
@@ -60,3 +55,4 @@ function render(state){
         });
     });
 }
+render(states.home);
