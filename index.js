@@ -24,11 +24,11 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 // holds the pieces of State down there
 const store = {
-    'links': {
-        'primary': [ 'Home', 'About', 'Contact' ],
-        'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
-    },
     'home': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'title': 'Learnings',
         'page': `
             <main>
@@ -47,10 +47,18 @@ const store = {
     },
 
     'about': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'title': 'About Page',
         'page': ''
     },
     'contact': {
+        'links': {
+            'primary': [ 'Home', 'About', 'Contact' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'title': 'Contact',
         'page': ''
     }
