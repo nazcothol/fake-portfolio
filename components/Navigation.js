@@ -1,17 +1,29 @@
+function linkBuilder(links){
+// receive an array of 'strings' that are the names of
+// Return all of the necessary <li> items
+    let listHTML = '';
+
+    links.forEach(function linkHandler(link){
+        listHTML +=  `
+   <li>${link}</li>
+   `;
+    });
+
+    return listHTML;
+}
+
 export default function(state){
     return `
-<nav><ul>
-<li><a href="#">Home</a></li>
-<li><a href="../About">About</a></li>
-<li><a href="../Contact">Contact</a></li>
+<nav>
+  <ul>
+    ${linkBuilder(state.links.primary)}
 <li class="dropdown">
     Portfolio
     <ul>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
+${linkBuilder(state.links.dropdown)}
     </ul>
 </li>
-</ul></nav>
+</ul>
+</nav>
 `;
 }
