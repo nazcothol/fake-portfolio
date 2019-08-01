@@ -23,7 +23,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
-const states = {
+const store = {
     'home': {
         'title': 'Learnings'
     },
@@ -51,8 +51,8 @@ function render(state){
         navItem.addEventListener('click', function clickHandler(event){
             event.preventDefault();
 
-            render(states[event.target.textContent.toLowerCase()]);
+            render(store[event.target.textContent.toLowerCase()]);
         });
     });
 }
-render(states.home);
+render(store.home);
