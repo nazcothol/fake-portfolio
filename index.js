@@ -22,6 +22,21 @@ import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+
+import Navigo from 'navigo';
+/**
+ * location.origin provs the 'base' URL for Navigo to get started
+ * new creates a new instance of Navigo from its constructor fctn
+ */
+const router = new Navigo(location.origin);
+
+// router
+//  .on('/', function routerFxn(){
+//        console.log('hello home page!');
+//    })
+//    .resolve();
+
+
 // holds the pieces of State down there
 const store = {
     'home': {
@@ -68,29 +83,44 @@ const store = {
             'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
         },
         'title': 'Blog Page',
-        'page': 'Coming Soon!'
+
+        // TODO: 'page' will be updated after we fetch the data for the blog post.
+        'page': `
+        <p>Loading blog posts!</p>
+        `
     }
 };
 
 
 function render(state){
-    // we use function invocation that actually runs the fnctn and then 'returns' the mkup so it's prop browser rendered
+    // We use function invocation that actually runs the fxn. and then `returns` the markup so that it is properly rendered in the browser.
     document.querySelector('#root').innerHTML = `
-    ${Navigation(state)}
-    ${Header(state)}
-    ${Main(state)}
-    ${Footer(state)}
+        ${Navigation(state)}
+        ${Header(state)}
+        ${Main(state)}
+        ${Footer(state)}
     `;
-    // nav functional component renders 'new' links each time
-    // the elements won't exist until pages are rendered
-    const navItems = document.querySelectorAll('nav>ul>li:not(.dropdown)');
 
-    navItems.forEach(function eventListenerAdder(navItem){
-        navItem.addEventListener('click', function clickHandler(event){
-            event.preventDefault();
-
-            render(store[event.target.textContent.toLowerCase()]);
-        });
-    });
+    // updatePageLinks() works in conjunction with 'data-navigo' and the <a href>s found in the Navigation functional component.
+    router.updatePageLinks(); // Replaces our custom click event listeners with the recursive render.
 }
+
+// To render a page, we pass in a piece of state.
 render(store.home);
+
+/**
+ * .on is a Navigo method that behaves as any event listener might.
+ * It 'listens' to location.pathname and responds accordingly
+ *
+ * https://github.com/krasimir/navigo#parameterized-urls
+ *
+ * Whatever comes in as 'location.pathname',
+ * 'save' that in the 'params' object under the 🔑 'page.'
+ *
+ * resolve() is a 'navigo' method that triggers the 'routing' to happen using `on()`'s cb fxn. (https://www.npmjs.com/package/navigo#resolving-the-routes)
+ */
+router
+    .on(':view', function renderFromParams(params){
+        render(store[params.view]);
+    })
+    .resolve();

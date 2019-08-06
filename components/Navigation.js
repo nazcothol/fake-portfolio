@@ -1,15 +1,11 @@
 function linkBuilder(links){
 // receive an array of 'strings' that are the names of
 // Return all of the necessary <li> items
-    let listHTML = '';
-
-    links.forEach(function linkHandler(link){
-        listHTML +=  `
-   <li>${link}</li>
-   `;
-    });
-
-    return listHTML;
+    return links
+        .map(function linkLister(link){
+            return `<li><a href="/${link.toLowerCase()}" data-navigo>${link}</a></li>`;
+        })
+        .join(' ');
 }
 
 export default function(state){
